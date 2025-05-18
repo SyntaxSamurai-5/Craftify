@@ -41,31 +41,39 @@
     <div class="mt-3 text-danger text-center" id="loginError" style="display:none;"></div>
   </div>
 
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      const username = document.getElementById("loginUsername").value;
-      const password = document.getElementById("loginPassword").value;
-      const userData = localStorage.getItem("user_" + username);
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+    const scriptURL = "https://script.google.com/macros/s/AKfycbz1UeyEOMrooJcd29DHCDq3xZ9ER0ERmwKo1HS8QQn_Q_6KIxheAu3FPSiuCEeWV81L/exec"; // Replace with Apps Script URL
 
-      if (!userData) {
-        document.getElementById("loginError").innerText = "User not found!";
-        document.getElementById("loginError").style.display = "block";
-        return;
-      }
+    const formData = new URLSearchParams();
+    formData.append("action", "login");
+    formData.append("username", username);
+    formData.append("password", password);
 
-      const user = JSON.parse(userData);
-
-      if (user.password === password) {
-        // Login success
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(responseText => {
+      if (responseText === "VALID") {
         localStorage.setItem("loggedInUser", username);
         window.location.href = "home.html";
       } else {
-        document.getElementById("loginError").innerText = "Incorrect password!";
+        document.getElementById("loginError").innerText = "Invalid credentials!";
         document.getElementById("loginError").style.display = "block";
       }
+    })
+    .catch(error => {
+      document.getElementById("loginError").innerText = "Server error. Try again.";
+      document.getElementById("loginError").style.display = "block";
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
