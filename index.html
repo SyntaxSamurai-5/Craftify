@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+  
+      <link rel="stylesheet" href="./Assets/Css/style.css">
+
+      <title>Craftify</title>
+   </head>
+   <body>
+    <!-- HEADER SECTION STARTS HERE -->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <img src="./Assets/Images/logo.png" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="./Pages/about Us.html" class="nav__link">About Us</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="./Pages/services.html" class="nav__link">Services</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Featured</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Contact Us</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__actions">
+               <!-- Search button -->
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+
+               <!-- Login button -->
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!-- SEARCH BUTTON -->
+      <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!--==================== LOGIN ====================-->
+      <div class="login" id="login">
+         <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+            
+            <div class="login__group">
+               <div>
+                  <label for="email" class="login__label">Email</label>
+                  <input type="email" placeholder="Enter your Email" id="email" class="login__input">
+               </div>
+               
+               <div>
+                  <label for="password" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
+               </div>
+            </div>
+
+            <div>
+               <p class="login__signup">
+                  You do not have an account? <a href="./signup.html">Sign up</a>
+               </p>
+   
+          
+   
+               <button type="submit" class="login__button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+<section class="hero__content container">
+   <h1 class="hero__title">Discover Handcrafted Wonders</h1>
+   <p class="hero__description">Unique handmade crafts made with love and creativity. Shop now to support local artisans!</p>
+   <a href="./Pages/explore.html" class="hero__button">Explore Now</a>
+</section>
+
+  <!-- Hero Image -->
+
+
+      <main class="main">
+         <img src="./Assets/Images/bg-img.jpg" alt="image" class="main__bg">
+      </main>
+      
+
+ 
+<!-- Categories section -->
+
+<section class="categories section" id="categories">
+   <h2 class="section__title">Craft Categories</h2>
+   <div class="categories__container container grid">
+      <div class="category__card">
+         <img src="./Assets/Images/1.jpg" alt="Jewelry" class="category__img">
+         <h3 class="category__title">Handmade cards</h3>
+      </div>
+      <div class="category__card">
+         <img src="./Assets/Images/2.jpg" alt="Home Decor" class="category__img">
+         <h3 class="category__title">School Projects</h3>
+      </div>
+      <div class="category__card">
+         <img src="./Assets/Images/bouquet.jpeg" alt="Pottery" class="category__img">
+         <h3 class="category__title">Custom Bouquet</h3>
+      </div>
+      <div class="category__card">
+         <img src="./Assets/Images/hampers.jpg" alt="Pottery" class="category__img">
+         <h3 class="category__title">Gift Hampers</h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="featured section" id="featured">
+   <h2 class="section__title">Featured Crafts</h2>
+   <div class="featured__container container grid">
+      <div class="product__card">
+         <img src="./Assets/Images/craft1.jpg" alt="Craft 1" class="product__img">
+         <h3 class="product__name">Macrame Wall Hanging</h3>
+         <span class="product__price">$25.00</span>
+         <button class="product__btn">Buy Now</button>
+      </div>
+      <!-- Add more product cards similarly -->
+   </div>
+</section>
+
+<section class="testimonials section">
+   <h2 class="section__title">What Our Customers Say</h2>
+   <div class="testimonials__container container grid">
+      <div class="testimonial__card">
+         <p>"Beautiful craftsmanship! Will definitely order again."</p>
+         <h4>- Sarah K.</h4>
+      </div>
+      <!-- Add more testimonials -->
+   </div>
+</section>
+
+
+      <footer class="footer section">
+   <div class="footer__container container grid">
+      <div class="footer__content">
+         <h3 class="footer__title">Craftify</h3>
+         <p>Handmade with love. Follow us on:</p>
+         <div class="footer__social">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-circle-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+         </div>
+      </div>
+      <div class="footer__content">
+         <h3 class="footer__title">Quick Links</h3>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./Pages/about Us.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+      </div>
+   </div>
+</footer>
+
+     
+      <script src="./Assets/js/index.js"></script>
+   </body>
+</html>

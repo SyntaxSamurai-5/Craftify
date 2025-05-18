@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefcfb;
+    color: #333;
+    line-height: 1.6;
+}
+
+header.banner {
+    background: linear-gradient(120deg, #f8c8dc, #fcd5ce);
+    text-align: center;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.banner h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.banner .highlight {
+    color: #e07a5f;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff8f2;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-content h2 {
+    margin-top: 30px;
+    color: #3d405b;
+}
+
+.about-content p, .about-content ul {
+    margin: 15px 0;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content a {
+    color: #e07a5f;
+    text-decoration: none;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+.team-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.team-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.member-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.member-card:hover{
+    transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    
+}
+
+.member-card h3 {
+    margin: 10px 0 5px;
+    color: #3d405b;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.scale-up {
+    animation: scaleUp 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .team-section {
+        flex-direction: column;
+    }
+}
