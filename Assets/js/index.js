@@ -43,3 +43,16 @@ loginClose.addEventListener('click', () =>{
    login.classList.remove('show-login')
 })
 
+document.querySelector('.login__form').addEventListener('submit', function(e) {
+  e.preventDefault(); 
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+ window.location.href = "./Pages/home.html";
+
+});
+
+const btn = document.querySelector(".login__button")
+btn.addEventListener('click', () =>{
+   window.location
+})

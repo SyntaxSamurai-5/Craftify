@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crafts Website - Home</title>
+  <style>
+    /* Simple navbar style */
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .welcome-msg {
+      font-weight: bold;
+      color: #4F46E5; /* Indigo-ish */
+    }
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    ul.nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    ul.nav-links li a:hover {
+      color: #4F46E5;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="welcome-msg" id="welcomeMsg">Welcome, User</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main style="padding: 2rem; font-family: Arial, sans-serif;">
+    <h1>Welcome to your Crafts Dashboard</h1>
+    <p>Explore beautiful handmade crafts, place new orders, and manage your profile.</p>
+  </main>
+
+  <script>
+    // Get logged in user from localStorage
+    const user = localStorage.getItem('loggedInUser');
+
+    if (user) {
+      document.getElementById('welcomeMsg').textContent = `Welcome, ${user}`;
+    } else {
+      // If no user found, redirect to login page
+      window.location.href = '../index.html';  // Or wherever your login page is
+    }
+
+    // Logout button clears storage and redirects to login
+    document.getElementById('logoutBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.removeItem('loggedInUser');
+      window.location.href = '../index.html'; // login page
+    });
+  </script>
+
+</body>
+</html>
